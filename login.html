@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+        <div id="loginForm" class="form-container active">
+            <h2>Log in to Famoze</h2>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+            <p>or use your email account</p>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Sign In</button>
+            <p><a href="#">Forgot your password?</a></p>
+        </div>
+        <div id="signupForm" class="form-container">
+            <h2>Create an Account</h2>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+            <p>or use your email for registration</p>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Sign Up</button>
+        </div>
+    </div>
+
+
+    <script src="login.js"></script>
+</body>
+</html>
