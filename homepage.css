@@ -1,0 +1,352 @@
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    color: #ffffff;
+            background: linear-gradient(
+    180deg,
+    #8c52ff 0%,
+    #7936ff 40%,
+    #e9c5ff 50%,
+    #9B7EBD 70%,
+    #9B7EBD 100%
+);
+background-size: 100%;
+background-position: left;
+}
+::-webkit-scrollbar-thumb {
+    background: #c079ff;
+    border-radius: 10px;
+    
+}
+body {
+      background: #000000;
+      font-family: 'League Spartan';
+      line-height: 1.2;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}	
+/* NAVBAR */
+.navbar {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    justify-content: space-around;
+    box-shadow: 0 0px 1px whitesmoke;
+    transform: translateX(-150px); 
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item h3 {
+    padding: 10px 30px;
+    margin-left: 5px;
+}
+
+.nav-item p {
+    margin-left: 12px;
+    margin-top: 12px;
+}
+.nav-icon{
+    display: flex;
+    border-radius: 10px;
+    padding: 15px;
+}
+.nav-icon:hover{
+    background-color: #ac4dff;
+}
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #d4a2ff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.toggle-btn i {
+    font-size: 20px;
+}
+.nav_logo{
+    width: 0px;
+}
+.nav-toggle{
+    display: flex;
+    width: 0;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99999;
+    padding: 0px;
+    background-color: #000000;
+    box-shadow: 0 0px 1px whitesmoke;
+    top: 0;
+    opacity: 0;
+}
+@media (max-width: 846px) {
+    .navbar {
+        transform: translateX(-242px); /* Hidden by default */
+    }
+    .navbar.active {
+        transform: translateX(0); /* Show when active */
+    }
+    .toggle-btn{
+        opacity: 1;
+    }
+    .logo{
+        opacity: 0;
+    }
+    .nav-toggle{
+        opacity: 1;
+        padding: 10px 30px;
+        width: 100%;
+    }
+    .nav_logo{
+        width: 90px;
+    }
+}
+.nav-icon h3 {
+  color: rgb(255, 255, 255);
+}
+.fas{
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* POST SECTION */
+
+.post-section{
+margin-left: 250px;
+margin-top: 80px;
+overflow: hidden;
+}
+.search-section{
+  margin-left: 90px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width:846px){
+.post-section{
+    margin-left: 2px;
+    margin-top: 100px;
+    }
+    .container{
+        width: 100%;
+        padding: 5px;
+    }
+    .search-section{
+        margin-left: 15px;
+    }
+    }
+.feed {
+    width: 100%;
+}
+
+.tweet-box {
+    background-color: #3b005b;
+    background: linear-gradient(
+        130deg,
+        rgb(48, 0, 66) 0%,
+        rgb(28, 28, 28) 40%,
+        rgb(28, 28, 28) 50%,
+        rgb(28, 28, 28) 70%,
+        rgb(22, 0, 103) 100%
+    );
+    box-shadow: 0px 0px 2px whitesmoke;
+    padding: 20px 40px 20px 20px;
+    border-radius: 10px;
+    
+    margin-bottom: 20px;
+}
+
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 80%;
+    box-shadow: 0 0px 5px whitesmoke;
+    background-color: #000000;
+    padding: 20px 40px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px whitesmoke;
+    margin-bottom: 20px;
+}
+.post-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#tweet-text {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e1e8ed;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    background-color: #191919;
+}
+
+#media-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+#tweet-btn, #popup-btn, #close-popup {
+    background-color: #d187ff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#close-popup{
+    margin-top: 40px;
+}
+
+#tweet-btn:hover, #popup-btn:hover, #close-popup:hover {
+    background-color: #9B7EBD;
+}
+
+#tweets-container {
+    margin-top: 20px;
+    
+}
+
+.tweet {
+    background-color: #ffffff;
+    background: linear-gradient(
+        130deg,
+        rgb(48, 0, 66) 0%,
+        rgb(0, 0, 0) 40%,
+        rgb(0, 0, 0) 50%,
+        rgb(0, 0, 0) 70%,
+        rgb(22, 0, 103) 100%
+    );
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 2px whitesmoke;
+}
+
+.tweet p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.tweet .author {
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.comments {
+    margin-top: 10px;
+    border-top: 1px solid #e1e8ed;
+    padding-top: 10px;
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 0px;
+}
+@media (max-width:320px){
+    .comment-box{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+.comment-box button {
+    background-color: #e9c5ff;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment {
+    margin-top: 5px;
+}
+
+
+
+/* POPUP SECTION */
+
+.dropdown {
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+select {
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+outline: none;
+}
+
+.dropdown-section {
+display: none;
+padding: 20px;
+background-color: #1f1f1f;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-top: 10px;
+box-shadow: 0 0px 5px whitesmoke;
+}
+.dropdown-section.acti {
+    display: block;
+}
+.skill-btn{
+    padding: 15px;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: #e9c5ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.skill-btn.clicked {
+    background-color: #d187ff; /* Change to your desired color */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form id="multiStepForm">
+            <div class="step active" id="step1">
+                <h2>What kind of work you are searching for?</h2>
+                <div>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Accounting & Consulting</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Admin Support</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Customer Service</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Data Science & Analystic</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Design & Creative</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Engineering & Architecture</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>IT & Networking</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Legal</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Sales & Marketing</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Translation</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Web, Mobile & Software Dev</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Writing</b></button>
+                    <button type="button" class="skill-btn" onclick="selectSkill(this)"><b>Others</b></button>
+                </div>
+            </div>
+            <div class="step" id="step2">
+                <h2>Type your skills(Max 15)</h2>
+                <div class="skills-container">
+                    <h2>Add Your Skills</h2>
+                    <input type="text" id="skillInput" placeholder="Type a skill...">
+                    <div class="suggestions" id="suggestions"></div>
+                    <div class="skills-list" id="skillsList"></div>
+                    <input type="hidden" id="skills" name="skills">
+                </div>
+            </div>
+            <div class="step" id="step3">
+                <h2>Add a title to tell the world what you do.</h2>
+                <p style="color: whitesmoke;margin-top: 0px;">It's the very first thing clients see, so make it count stand out by describing your expertise in your own word.</p>
+                <label style="color: whitesmoke;display: block;" for="tagline">Your professional role</label>
+                <input type="text" id="tagline" placeholder=" Example: Web Developer" required>
+            </div>
+            <div class="step" id="step4">
+                <h2>Next, tell us which languages you speak.</h2>
+                <p style="color: whitesmoke;margin-top: 0px;">It's a global, so clients are often interested to know what languages you speak.</p>
+                <label style="color: whitesmoke;display: block;" for="language">Language (comma-separated):</label>
+                <input type="text" id="language" placeholder=" Enter languages (e.g., English, Hindi)" required>
+            </div>
+            <div class="step" id="step5">
+                <h2>Tell us your full name.</h2>
+                <p style="color: whitesmoke;margin-top: 0px;">(Like: Sumit Roy)</p>
+                <label style="color: whitesmoke;display: block;" for="name"></label>
+                <input type="text" id="name" placeholder=" Type here...." required>
+            </div>
+            <div class="step" id="step6">
+                <h2>Tell us from which country you belong.</h2>
+                <p style="color: whitesmoke;margin-top: 0px;">(Like: India)</p>
+                <label style="color: whitesmoke;display: block;" for="country"></label>
+                <input type="text" id="country" placeholder="(Like: India)" required>
+
+            </div>
+            <div class="step" id="step7">
+                <h2>Upload Profile Picture:</h2>
+                <p style="color: whitesmoke;margin-top: 0px;"></p>
+                <label style="color: whitesmoke;display: block;" for="profilePic"></label>
+                <input type="file" id="profilePic" accept="image/*">
+            </div>
+            <div class="step" id="step8">
+                <h2>Now write a bio to tell the world about yourself.</h2>
+                <p style="color: whitesmoke;margin-top: 0px;">Help people get to know you at a glance. What work do you do best? Tell them clearly using this space.</p>
+                <label style="color: whitesmoke;display: block;" for="about">About Me:</label>
+                <textarea id="about" rows="5" placeholder=" Write about yourself" required></textarea>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" onclick="prevStep()" id="prevBtn" style="display:none;">Back</button>
+                <button type="button" onclick="nextStep()" id="nextBtn">Next</button>
+                <button type="submit" onclick="saveDetails()" id="saveBtn">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>

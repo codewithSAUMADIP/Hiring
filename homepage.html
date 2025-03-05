@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+       <!-- NAVBAR -->
+       <div class="nav-toggle">
+        <div><img class="nav_logo" src="C:\Users\91629\my portfolio\Freelancing website\image\logo.png" alt=""></div>
+        <button class="toggle-btn"><i class="fas fa-bars"></i></button>
+    </div>
+    
+    <div class="navbar">
+        <div class="nav-item"><img class="logo" src="C:\Users\91629\my portfolio\Freelancing website\image\logo.png" alt="Logo"></div>
+        <div>
+            <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-home"></i></p><h3 >Home</h3></div></a></div>
+            <div class="nav-item"><a href="profile.html"><div class="nav-icon"><p><i class="fas fa-user"></i></p><h3>Profile</h3></div></a></div>
+            <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-upload"></i></p><h3>Post work</h3></div></a></div>
+            <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-search"></i></p><h3>Find work</h3></div></a></div>
+        </div>
+        <div>
+            <div class="nav-item"><a href=""><div class="nav-icon"><p><i class="fas fa-cog"></i></p><h3>Setting</h3></div></a></div>
+            <div class="nav-item"><a href="index.html"><div class="nav-icon"><p><i class="fas fa-sign-out-alt"></i></p><h3>Log out</h3></div></a></div>
+        </div>
+    </div> 
+  
+
+<!-- POST SECTION -->
+    <div class="post-section">
+
+        <!-- SEARCH -->
+          <div class="search-section">
+            <input type="text" id="search-box" placeholder="Search work..." style="margin-bottom: 20px; padding: 10px; width: 80%; border-radius: 25px; border: 1px solid #ccc;background-color: #191919;">
+              <div id="search-container" class="search-container">
+                <!-- Existing content -->
+              </div>
+          </div>
+
+
+      <div class="container">
+        <div class="feed">
+            <!-- Updated Tweet Box -->
+            <div class="tweet-box">
+              <textarea id="tweet-text" placeholder="Add title"></textarea>
+              <textarea id="tweet-text" placeholder="Ad a description"></textarea>
+              <div class="post-buttons">
+                <button id="popup-btn">Add required skill</button>
+                <div><button id="tweet-btn">Post</button></div>
+              </div>
+            </div>
+            <div id="tweets-container">
+                <!-- Tweets will appear here -->
+            </div>
+        </div>
+      </div>
+    
+<!-- POPUP SECTION -->
+        <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+                        <h1 style="color: whitesmoke;">Dynamic Sections with Dropdown</h1>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown">
+                            <label for="section-select" style="color: whitesmoke;">Choose a section:</label>
+                            <select id="section-select">
+                            <option value="" disabled selected>None</option>
+                            <option value="section1">Section 1</option>
+                            <option value="section2">Section 2</option>
+                            <option value="section3">Section 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Sections -->
+                        <div id="section1" class="dropdown-section">
+                            <h3 style="margin-bottom: 20px;color: whitesmoke;">Web developement</h3>
+                            <button class="skill-btn" onclick="changeColor(this)">HTML</button>
+                            <button class="skill-btn" onclick="changeColor(this)">CSS</button>
+                            <button class="skill-btn" onclick="changeColor(this)">JS</button>
+                        </div>
+                        <div id="section2" class="dropdown-section">
+                            <h3 style="margin-bottom: 20px;color: whitesmoke;">Web developement</h3>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 1</button>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 2</button>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 3</button>
+                        </div>
+                        <div id="section3" class="dropdown-section">
+                            <h3 style="margin-bottom: 20px;color: whitesmoke;">Web developement</h3>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 1</button>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 2</button>
+                            <button class="skill-btn" onclick="changeColor(this)">Skill 3</button>
+                        </div>
+                        <button id="close-popup">Save</button>
+                        
+            </div>
+    
+        </div>
+
+        <script src="homepage.js"></script>
+</body>
+</html>

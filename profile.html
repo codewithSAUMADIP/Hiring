@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+              <!-- NAVBAR -->
+              <div class="nav-toggle">
+                <div><img class="nav_logo" src="C:\Users\91629\my portfolio\Freelancing website\image\logo.png" alt=""></div>
+                <button class="toggle-btn"><i class="fas fa-bars"></i></button>
+            </div>
+            
+            <div class="navbar">
+                <div class="nav-item"><img class="logo" src="C:\Users\91629\my portfolio\Freelancing website\image\logo.png" alt="Logo"></div>
+                <div>
+                    <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-home"></i></p><h3 >Home</h3></div></a></div>
+                    <div class="nav-item"><a href="profile.html"><div class="nav-icon"><p><i class="fas fa-user"></i></p><h3>Profile</h3></div></a></div>
+                    <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-upload"></i></p><h3>Post work</h3></div></a></div>
+                    <div class="nav-item"><a href="Homepage.html"><div class="nav-icon"><p><i class="fas fa-search"></i></p><h3>Find work</h3></div></a></div>
+                </div>
+                <div>
+                    <div class="nav-item"><a href=""><div class="nav-icon"><p><i class="fas fa-cog"></i></p><h3>Setting</h3></div></a></div>
+                    <div class="nav-item"><a href="index.html"><div class="nav-icon"><p><i class="fas fa-sign-out-alt"></i></p><h3>Log out</h3></div></a></div>
+                </div>
+            </div> 
+        <!-- PROFILE -->
+            <div class="total-profile">
+                <div class="profile-container">
+                    <div>
+                        <img id="profile-img" class="profile-img" src="" alt="Profile Picture">
+                    </div>
+                    <div class="profile-name">
+                        <h2 id="profile-name"></h2>
+                        <p id="profile-tagline"></p>
+                        <div class="profile-location">
+                            <h4 id="profile-country"></h4>
+                            <h4 id="profile-language"></h4>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="about-section">
+                    <h4 style="color: rgb(255, 255, 255);font-size: 20px;">About me</h4>
+                    <div style="width: 102px;height: 10px;border-radius: 5px;background-color: rgb(255, 247, 0);margin-left: -5px;"></div>
+                    <p class="about-me" style="margin-top: 10px;">
+                        <span id="short-about"></span>
+                        <span id="extra-about" style="display: none;"></span>
+                        <button id="read-more-btn" class="read-more-btn">Read More</button>
+                    </p>
+                </div>
+            
+                <div class="skills-section">
+                    <h4 style="color: whitesmoke;font-size: 20px;">Skills</h4>
+                    <div style="width: 62px;height: 10px;border-radius: 5px;background-color: rgb(255, 247, 0);margin-left: -5px;"></div>
+                    <div style="margin-top: 10px;" id="skills-container"></div>
+                </div>
+        
+        
+        
+        <!-- EDUCATION -->  
+        <div style="width: 90%;margin-left: auto;margin-right: auto;margin-top: 30px;">
+            <h4 style="color: rgb(255, 255, 255);font-size: 20px;">Education</h4>
+            <div style="width: 108px;height: 10px;border-radius: 5px;background-color: rgb(255, 247, 0);margin-left: -5px;"></div>
+            <div class="profile-education">
+                <button class="edu-btn" onclick="openEducationPopup()">Add Education Details</button>
+                <div id="educationDetails" style="color: whitesmoke;"></div>
+            </div>
+        
+            <div class="edu-overly" id="edu-overly"></div>
+            <div class="popup-edu" id="popup-edu">
+                <h3 style="margin-bottom: 10px;">Add Education Details</h3>
+                
+                <label>University Name:</label>
+                <input type="text" id="university" required><br><br>
+                <label>Degree:</label>
+                <input type="text" id="degree" required><br><br>
+                <label>Field of Study:</label>
+                <input type="text" id="field" required><br><br>
+                <label>Year of Enrollment:</label>
+                <input type="number" id="enrollYear" required><br><br>
+                <label>Year of Graduation:</label>
+                <input type="number" id="gradYear" required><br><br>
+                <label>Grade (In percentage)</label>
+                <input type="number" id="grade"><br><br>
+                
+                <button class="edu-btn" onclick="saveEducationDetails()">Save</button>
+                <button class="edu-btn" onclick="closeEducationPopup()" style="background: red;">Cancel</button>
+            </div>
+        </div>
+        
+        <!-- JOB -->
+        <div style="width: 90%;margin-left: auto;margin-right: auto;margin-top: 30px;">
+            <h4 style="color: rgb(255, 255, 255);font-size: 20px;">Experience</h4>
+            <div style="width: 118px;height: 10px;border-radius: 5px;background-color: rgb(255, 247, 0);margin-left: -5px;"></div>
+            <div class="profile-job">
+                <button class="job-btn" onclick="openJobPopup()">Add Experience Details</button>
+                <div id="jobDetails" style="color: whitesmoke;"></div>
+            </div>
+        
+            <div class="job-overly" id="job-overly"></div>
+            <div class="popup-job" id="popup-job">
+                <h3 style="margin-bottom: 10px;">Add Experience Details</h3>
+                
+                <label>Title: *</label>
+                <input type="text" id="title" placeholder="Ex: Retail Sales Manager" required><br><br>
+                <label>Employment Type: *</label>
+                <input type="text" id="employmenttype" placeholder="Ex: Full-time" required><br><br>
+                <label>Company or Organization: *</label>
+                <input type="text" id="company" placeholder="Ex: Google" required><br><br>
+                <label>Start Year: *</label>
+                <input type="text" id="startYear" placeholder="Start Year" required><br><br>
+                <label>End Year: *</label>
+                <input type="text" id="endYear" placeholder="End Year" required><br><br>
+                <label>Location: *</label>
+                <input type="text" id="location" placeholder="Ex: Kolkata, India" required><br><br>
+                
+                <button class="job-btn" onclick="saveJobDetails()">Save</button>
+                <button class="job-btn" onclick="closeJobPopup()" style="background: red;">Cancel</button>
+            </div>
+        </div>
+        
+        <!-- PROJECT -->   
+                <div style="width: 90%;margin-left: auto;margin-right: auto;margin-top: 30px;">
+                    <h4 style="color: rgb(255, 255, 255);font-size: 20px;">Project</h4>
+                    <div style="width: 82px;height: 10px;border-radius: 5px;background-color: rgb(255, 247, 0);margin-left: -5px;"></div>
+                <div class="portfolio-container">
+                    
+                    <div class="portfolio-header">
+                        <h2 style="color: whitesmoke;">Add your project</h2>
+                        <span class="new-label">NEW</span>
+                    </div>
+                    <button id="addProjectBtn">Add ➕</button>
+                    <div class="portfolio-grid" id="projectGrid">
+            
+                    </div>
+                    <p id="error" class="error"></p>
+                </div>
+                </div>
+                <!-- POPUP -->
+                <div class="overlay" id="overlay"></div>
+                <div class="popup" id="popup">
+                    <h3>Add Project Details</h3>
+                    <form id="projectForm">
+                        <label for="projectTitle">Title...</label>
+                        <input type="text" id="projectTitle" placeholder="Enter project title">
+            
+                        <label for="projectDescription">Describe your project min 200 words...</label>
+                        <textarea id="projectDescription" rows="4" placeholder="Enter project description"></textarea>
+            
+                        <label for="projectPrice">Price(In Rupees)...</label>
+                        <input type="number" id="projectPrice" placeholder="Enter project price">
+            
+                        <label for="projectDuration">Duration...</label>
+                        <input type="text" id="projectDuration" placeholder="Enter project duration">
+            
+                        <label for="projectMedia">Add Media (Images/Videos, Max 1, Max size 25MB)</label>
+                        <input type="file" id="projectMedia" multiple accept="image/*,video/*">
+            
+            
+                        <p id="popupError" class="error"></p>
+            
+                        <div class="actions">
+                            <button type="button" class="cancel" id="cancelPopup">Cancel</button>
+                            <button type="submit" class="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+
+                <script src="profile.js"></script>
+</body>
+</html>
